@@ -61,8 +61,6 @@ int dinic()
 int N,M,A,B,C;
 int main()
 {
-	freopen("in.txt","r",stdin);
-	freopen("out.txt","w",stdout);
 	scanf("%d%d",&N,&M);
 	S=0;T=N+1;n=T;
 	add_edge(S,1,2,0);add_edge(N,T,2,0);

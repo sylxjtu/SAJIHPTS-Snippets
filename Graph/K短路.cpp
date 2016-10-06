@@ -1,10 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <string.h>
-using namespace std;
-#define MAXN 1011
-#define INF 999999999
 int n,m,s,t,k,dis[MAXN];
 struct node
 {

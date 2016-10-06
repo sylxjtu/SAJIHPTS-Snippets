@@ -1,11 +1,3 @@
-//dij heatwv
-#include<iostream>
-#include<cstdio>
-#include<cstdlib>
-#include<algorithm>
-#include<cstring>
-#include<cmath>
-#include<queue>
 using namespace std;
 #define pii pair<int, int>
 priority_queue<pii, vector<pii>, greater<pii> > heap; 
