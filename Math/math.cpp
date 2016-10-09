@@ -24,7 +24,7 @@ struct Matrix
 int ii,jj,nn;
 
 LL det(LL a[][maxn], int n) {//求行列式值(整数版)
-    int i, j, k, r;
+    int i, j;
     LL res = 1;
     for (i = 0; i < n; i++) {
         for (j = i + 1; j < n; j++) {
@@ -144,6 +144,27 @@ LL inv(LL a,LL n)//a关于n的逆元
 	LL d,x,y;
 	tgcd(a,n,d,x,y);
 	return d==1?(x+n)%n:-1;
+}
+
+// x mod m0=a0,x mod m =a,noSolution return 0 
+//初始可令 m0 = 1 ,a0 = 0 
+//布尔值返回是否有解
+//m0,m可以不互质
+//若有多个方程，做多次此剩余定理
+//m0，a0返回答案
+bool _china(LL &m0,LL &a0,LL m,LL a)  
+{
+    LL g,x,y;
+    LL c=abs(a-a0);
+    tgcd(m0,m,g,x,y);
+    if ( c % g ) return 0;
+    x*=(a-a0)/g; 
+    x%=m/g;
+    a0=x*m0+a0;
+    m0*=m/g;
+    a0%=m0;
+    if(a0<0) a0+=m0;
+    return 1;
 }
 
 LL china(int n,int* a,int* m)//中国剩余定理
