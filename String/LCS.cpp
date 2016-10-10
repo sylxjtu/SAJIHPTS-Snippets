@@ -10,8 +10,8 @@ int maxCommonSubstring(char *s1, char *s2)
 		if (!st[cur].next[c]){
 			while (cur != -1 && !st[cur].next[c])
 				cur = st[cur].link;
+			if (cur == -1){ match = cur = 0; continue; }
 			match = st[cur].len;
-			if (cur == -1){ cur = 0; continue; }
 		}
 		cur = st[cur].next[c];
 		ret = max(ret, ++match);
