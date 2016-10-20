@@ -81,7 +81,7 @@ inline void read(int &x) {
     }
 }
 
-int main()//read不能读负数！！！！！！！
+int main()
 {
 	read(n);read(m);
 	for(i=1;i<=n;i++)read(c[i]);
