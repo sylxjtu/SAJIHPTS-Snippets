@@ -111,3 +111,18 @@ void chineseRemainder(const int mod[], int *a[], int ret[], int num, int n, int 
 	}
 }
 //附满足条件大整数：167772161, 469762049, 754974721
+/*
+这个加到ntt里，加最后打注释就好
+MOD = mm[1];
+		int r = power(mm[0], mm[1] - 2);
+		for (int i = 0; i < 2 * n; i++)
+			ans[i] = mm[0] * (long long)mul(r, sub(a[1][0][i], a[0][0][i])) + a[0][0][i];
+*/
+
+/*
+ * inline LL mul(LL a,LL b,LL mod)
+{
+    a=(a%mod+mod)%mod;
+    b=(b%mod+mod)%mod;
+    return ((a*b-(LL)((long double)a/mod*b+.5L)*mod)%mod+mod)%mod;
+}*/
