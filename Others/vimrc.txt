@@ -1,4 +1,4 @@
-map <F9> :! g++ % -o %< -g -lm -Wall && size %<.exe <CR>
+﻿map <F9> :! g++ % -o %< -g -lm -Wall && size %<.exe <CR>
 map <F5> :! gdb %< <CR>
 set cindent
 set smartindent
